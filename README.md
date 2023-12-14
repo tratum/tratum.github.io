@@ -1,6 +1,7 @@
 # Welcome to tratum.github.io
  
-About Me
+## About Me: ## 
+
 Hello there! I'm tratum, a passionate web developer and creator. This is my corner on the web where I bring ideas to life through code.  I'm constantly exploring new ways to make the web a more exciting and functional place.
 
 What You'll Find Here
