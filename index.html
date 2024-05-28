@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+      If you are serving your web app in a path other than the root, change the
+      href value below to reflect the base path you are serving from.
+
+      The path provided below has to start and end with a slash "/" in order for
+      it to work correctly.
+
+      For more details:
+      * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+      This is a placeholder for base href that will be replaced by the value of
+      the `--base-href` argument provided to `flutter build`.
+    -->
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="author" content="tratum(Saksham Rawat)">
+    <meta flt-viewport="" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0">
+    <meta content="This portfolio website is not just a digital footprint but a testament to the artistry and innovation that defines tratum.dev's i.e. my coding prowess." name="description">
+
+    <meta property="og:title" content="Tratum.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tratum.github.io/cloud-asset-storage/images/portfolio_github_preview.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tratum.dev">
+    <meta name="twitter:description" content="This portfolio website is not just a digital footprint but a testament to the artistry and innovation that defines tratum.dev's i.e. my coding prowess.">
+    <meta name="twitter:image" content="https://tratum.github.io/cloud-asset-storage/images/portfolio_github_preview.webp">
+
+    <!-- iOS meta tags & icons -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="tratum.dev" name="apple-mobile-web-app-title">
+    <link href="icons/Icon-192.png" rel="apple-touch-icon">
+
+    <!-- Favicon -->
+    <link href="favicon.png" rel="icon" type="image/png"/>
+
+    <title>tratum.dev</title>
+    <link href="manifest.json" rel="manifest">
+    <link href="style.css" rel="stylesheet" >
+    <!-- <link rel="preload" href="main.dart.js" as="script"> -->
+
+    <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "1422290907";
+
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script defer src="flutter.js"></script>
+<!--    <script defer src="https://mozilla.github.io/pdf.js/build/pdf.mjs"></script>-->
+</head>
+<body>
+<div class="main-content" id="loader-content">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <img src="https://tratum.github.io/cloud-asset-storage/images/portfolio_github_preview_white.webp" alt="Loading Image"/>
+</div>
+<script>
+      function delay(time) {
+      return new Promise(resolve => setTimeout(resolve, time));
+    }
+    window.addEventListener('load', function(ev) {
+    var loaderContent = document.getElementById('loader-content');
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+        }).then(function (engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(async function (appRunner) {
+        loaderContent.style.opacity = "0";
+        await appRunner.runApp();
+      });
+    });
+</script>
+</body>
+</html>
